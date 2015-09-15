@@ -21,7 +21,7 @@ class Foo {
     
 //: [EXPLAIN YOUR ANSWER TO Q1 HERE]
 /*   words[] is already recognized as an optional with "words: [String?], therefore you don't need to
-tell the program that it will be optional */
+     tell the program that it will be optional and var wordA/wordB is guarenteed as String.*/
 /* Also, should all these functions be class func because in the execution functions at the bottom of the code, you're doing Foo.isAnagram(), therefore isAnagram() should be a class func? */
 
     
@@ -50,8 +50,8 @@ tell the program that it will be optional */
 //: Are we initializing the dictionary correctly?
     class func isAnagram(wordA: String, wordB: String) -> Bool? {
         var countLetters : [Character : Int] = [:]
-        var lenA = wordA.characters.count
-        var lenB = wordB.characters.count
+        let lenA = wordA.characters.count
+        let lenB = wordB.characters.count
         
         if lenA != lenB {
             return false
@@ -77,7 +77,7 @@ tell the program that it will be optional */
             }
         }
         
-        for (letter, count) in countLetters {
+        for (_, count) in countLetters {
             if count != 0 {
                 return false
             }
