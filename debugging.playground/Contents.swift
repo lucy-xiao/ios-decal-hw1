@@ -98,4 +98,5 @@ Foo.isAnagram("hello", wordB: "what")
 
 var palindromes = ["hih", "racecar", "mom", "wow"]
 var notPalindromes = ["gene", "shawn", "hello"]
-Foo.arePalindromes(pal
+Foo.arePalindromes(palindromes)
+Foo.arePalindromes(notPalindromes)
